@@ -13,41 +13,47 @@ function fillPosts(numImages) {
         imageElement.src = i % 2 === 0 ? img1 : img2;
         imageElement.alt = `Dino Image ${i + 1}`;
         posts.appendChild(imageElement);
+        console.log('test')
     }
 }
 
-function fillFeedstuff(numImages) {
-    for (let i = 0; i < numImages; i++) {
-        let postElement = document.createElement('div');
-        postElement.className = 'post'
+document.addEventListener('DOMContentLoaded', () => {
+    const feedstuff = document.getElementById('feedstuff');
 
-        let imageElement = document.createElement('img');
-        let randomIndex = Math.floor(Math.random() * images.length);
-        imageElement.src = images[randomIndex];
-        imageElement.alt = `Random Dino Image ${i + 1}`;
+    function fillFeedstuff(numImages) {
+        for (let i = 0; i < numImages; i++) {
+            let postElement = document.createElement('div');
+            postElement.className = 'post';
 
-        let usernameElement = document.createElement('div');
-        usernameElement.className = 'username';
-        usernameElement.textContent = `Username ${i + 1}`; 
+            let imageElement = document.createElement('img');
+            let randomIndex = Math.floor(Math.random() * images.length);
+            imageElement.src = images[randomIndex];
+            imageElement.alt = `Random Dino Image ${i + 1}`;
 
-        let likeButton = document.createElement('button');
-        likeButton.className = 'like-button';
-        likeButton.textContent = '❤️ Like';
+            let usernameElement = document.createElement('div');
+            usernameElement.className = 'username';
+            usernameElement.textContent = `Username ${i + 1}`; 
 
-        let commentsElement = document.createElement('div');
-        commentsElement.className = 'comments';
-        commentsElement.textContent = 'Lots of comments';
+            let likeButton = document.createElement('button');
+            likeButton.className = 'like-button';
+            likeButton.textContent = '❤️ Like';
 
-        postElement.appendChild(imageElement);
-        postElement.appendChild(usernameElement);
-        postElement.appendChild(likeButton);
-        postElement.appendChild(commentsElement);
+            let commentsElement = document.createElement('div');
+            commentsElement.className = 'comments';
+            commentsElement.textContent = 'Lots of comments';
 
-        feedstuff.appendChild(postElement);
+            postElement.appendChild(imageElement);
+            postElement.appendChild(usernameElement);
+            postElement.appendChild(likeButton);
+            postElement.appendChild(commentsElement);
+
+            feedstuff.appendChild(postElement);
+        }
     }
-}
 
-fillFeedstuff(20);
+    fillFeedstuff(20);
+});
+
 fillPosts(18);
 
 mover.addEventListener('click', () => {

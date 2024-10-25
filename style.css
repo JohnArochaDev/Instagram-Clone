@@ -143,3 +143,20 @@ label {
     width: fit-content;
     gap: 10px;
 }
+
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#tofeed {
+    display: flex;
+    justify-content: center; /* Center content */
+    width: 7vw;
+    height: 50px; /* Fixed height */
+    border-radius: 25px;
+    background-color: #5cb85c;
+    margin-left: 46vw;
+    margin-top: 2vh;
+}
