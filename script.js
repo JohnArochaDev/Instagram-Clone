@@ -55,7 +55,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 fillPosts(18);
-
-mover.addEventListener('click', () => {
-    window.location.href = '/index.html';
-});

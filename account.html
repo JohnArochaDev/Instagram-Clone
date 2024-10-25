@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Multigram - Login</title>
-</head>
-<body>
-    <div class="login-container">
-        <h1 id="loginlogin">Login</h1>
-        <div class="input-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" />
-        </div>
-        <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" />
-        </div>
-        <button id="mover">Submit</button>
+    <title>Multigram</title>
+  </head>
+  <body>
+
+    <h1 class="header" >Multigram</h1>
+
+    <h1>The User</h1>
+    <img class="pfp" src="/assets/readmeImages/download.png" alt="">
+    <div class="buttonspf">
+      <button>follow</button>
+      <button>message</button>
+    </div>
+    <h3>Dauser123</h3>
+    <h4>Im the user, and I like to do user things as a user. Im interested in [Insert hobby] and I love [insert other user] </h4>
+    <h5>www.safelinktoclick.com</h5>
+    <div id="infoBar" >
+      <div class="item" >Posts:  999</div>
+      <div class="item" >Following: 999</div>
+      <div class="item" >Followers: -2</div>
+    </div>
+    <div id="posts" >
+    </div>
+    <div id="tofeed">
+      <button onclick="location.href='/feed.html'">
+          To Feed
+      </button>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
